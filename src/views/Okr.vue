@@ -10,26 +10,7 @@
       <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
         <button
           type="button"
-          class="
-            inline-flex
-            items-center
-            justify-center
-            rounded-md
-            border border-transparent
-            bg-indigo-600
-            px-4
-            py-2
-            text-sm
-            font-medium
-            text-white
-            shadow-sm
-            hover:bg-indigo-700
-            focus:outline-none
-            focus:ring-2
-            focus:ring-indigo-500
-            focus:ring-offset-2
-            sm:w-auto
-          "
+          class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
           @click="open = true"
         >
           Add Okr
@@ -37,21 +18,11 @@
         <TransitionRoot as="template" :show="open">
           <Dialog
             as="div"
-            class="fixed z-10 inset-0 overflow-y-auto"
+            class="fixed inset-0 z-10 overflow-y-auto"
             @close="open = false"
           >
             <div
-              class="
-                flex
-                items-end
-                justify-center
-                min-h-screen
-                pt-4
-                px-4
-                pb-20
-                text-center
-                sm:block sm:p-0
-              "
+              class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"
             >
               <TransitionChild
                 as="template"
@@ -63,12 +34,7 @@
                 leave-to="opacity-0"
               >
                 <DialogOverlay
-                  class="
-                    fixed
-                    inset-0
-                    bg-gray-500 bg-opacity-75
-                    transition-opacity
-                  "
+                  class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75 "
                 />
               </TransitionChild>
 
@@ -88,58 +54,28 @@
                 leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <div
-                  class="
-                    relative
-                    inline-block
-                    align-bottom
-                    bg-white
-                    rounded-lg
-                    px-4
-                    pt-5
-                    pb-4
-                    text-left
-                    overflow-hidden
-                    shadow-xl
-                    transform
-                    transition-all
-                    sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6
-                  "
+                  class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
                 >
                   <div class="sm:flex sm:items-start">
                     <div
-                      class="
-                        mx-auto
-                        flex-shrink-0 flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-full
-                        bg-red-100
-                        sm:mx-0 sm:h-10 sm:w-10
-                      "
+                      class="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-red-100 rounded-full sm:mx-0 sm:h-10 sm:w-10"
                     >
                       <FolderAddIcon
-                        class="h-6 w-6 text-red-600"
+                        class="w-6 h-6 text-red-600"
                         aria-hidden="true"
                       />
                     </div>
                     <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <DialogTitle
                         as="h3"
-                        class="text-lg leading-6 font-medium text-gray-900"
+                        class="text-lg font-medium leading-6 text-gray-900"
                       >
                         Create new Okr
                       </DialogTitle>
                       <div class="mt-2">
                         <textarea
                           type="text"
-                          class="
-                            text-sm text-gray-700 text-left
-                            font-sans
-                            w-96
-                            h-24
-                          "
+                          class="h-24 font-sans text-sm text-left text-gray-700 w-96"
                           v-model="newOkr"
                           placeholder="Enter new OKR"
                         ></textarea>
@@ -149,53 +85,14 @@
                   <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                     <button
                       type="button"
-                      class="
-                        w-full
-                        inline-flex
-                        justify-center
-                        rounded-md
-                        border border-transparent
-                        shadow-sm
-                        px-4
-                        py-2
-                        bg-red-600
-                        text-base
-                        font-medium
-                        text-white
-                        hover:bg-red-700
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-offset-2
-                        focus:ring-red-500
-                        sm:ml-3 sm:w-auto sm:text-sm
-                      "
+                      class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
                       @click="open = false"
                     >
                       Save
                     </button>
                     <button
                       type="button"
-                      class="
-                        mt-3
-                        w-full
-                        inline-flex
-                        justify-center
-                        rounded-md
-                        border border-gray-300
-                        shadow-sm
-                        px-4
-                        py-2
-                        bg-white
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:bg-gray-50
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-offset-2
-                        focus:ring-indigo-500
-                        sm:mt-0 sm:w-auto sm:text-sm
-                      "
+                      class="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
                       @click="open = false"
                       ref="cancelButtonRef"
                     >
@@ -209,58 +106,44 @@
         </TransitionRoot>
       </div>
     </div>
-    <div class="mt-8 flex flex-col">
-      <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="flex flex-col mt-8">
+      <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <div
-            class="
-              overflow-hidden
-              shadow
-              ring-1 ring-black ring-opacity-5
-              md:rounded-lg
-            "
+            class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"
           >
             <table class="min-w-full divide-y divide-gray-300">
               <thead class="bg-gray-50">
                 <tr>
-                  <th class="text-left text-sm font-semibold text-gray-900">
+                  <th class="text-sm font-semibold text-left text-gray-900">
                     Id
                   </th>
-                  <th class="text-center text-sm font-semibold text-gray-900">
+                  <th class="text-sm font-semibold text-center text-gray-900">
                     Okr
                   </th>
-                  <th class="text-center text-sm font-semibold text-gray-900">
+                  <th class="text-sm font-semibold text-center text-gray-900">
                     Edit
                   </th>
-                  <th class="text-center text-sm font-semibold text-gray-900">
-                    Delete
+                  <th class="text-sm font-semibold text-center text-gray-900">
+                    Remove
                   </th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-200 bg-white">
+              <tbody class="bg-white divide-y divide-gray-200">
                 <tr v-for="okr in okrs" :key="okr._id">
                   <td
-                    class="
-                      whitespace-nowrap
-                      py-4
-                      pl-4
-                      pr-3
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      sm:pl-6
-                    "
+                    class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6"
                   >
                     {{ okr._id }}
                   </td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                  <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">
                     {{ okr.name }}
                   </td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                    <button>Edit</button>
+                  <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">
+                    <button @click="edit(okr._id)">Edit</button>
                   </td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                    <button>Remove</button>
+                  <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">
+                    <button @click="remove(okr._id)">Remove</button>
                   </td>
                 </tr>
               </tbody>
@@ -303,12 +186,15 @@ export default {
   },
   methods: {
     add: () => {
-      OkrApi.create({
-        name: this.newOkr,
-      });
+      const newOkr = this.newOkr;
+      OkrApi.create(newOkr);
     },
-    edit: () => {},
-    remove: () => {},
+    edit: (id, name) => {
+      OkrApi.patch(id, name);
+    },
+    remove: (id) => {
+      OkrApi.delete(id);
+    },
   },
 };
 </script>

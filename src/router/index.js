@@ -21,6 +21,12 @@ const routes = [
     name: "okr",
     component: () => import("../views/Okr.vue"),
   },
+  {
+    path: "/login",
+    name: "login",
+
+    component: () => import("../views/Login.vue"),
+  }
 ];
 
 const router = createRouter({
