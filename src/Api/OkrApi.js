@@ -9,8 +9,8 @@ export default {
     create(data) {
         return Api.post(`${resource}`, data);
     },
-    patch(Id, name) {
-        return Api.patch(`${resource}/${Id}`, name);
+    patch(Id, data) {
+        return Api.patch(`${resource}/${Id}`, data);
     },
     delete(Id) {
         return Api.delete(`${resource}/${Id}`);
